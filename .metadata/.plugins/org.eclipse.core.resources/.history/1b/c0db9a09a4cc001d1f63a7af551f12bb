@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 13px;
+}
+
+label{
+	display: inline-block;
+	text-align: center;
+	width: 80px;
+	font-weight: bold;
+}
