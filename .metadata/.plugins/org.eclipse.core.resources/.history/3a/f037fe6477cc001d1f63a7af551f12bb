@@ -10,6 +10,6 @@
 		<header th:replace="outlines/header::header"></header>
 		<main layout:fragment="content"></main>
 		<footer th:replace="outlines/footer::footer"></footer>
-		<iframe class="dn" id="ifrmProcess" name="ifrmProcess"></iframe>
+		<iframe id="ifrmProcess" name="ifrmProcess"></iframe>
 	</body>
 </html>
