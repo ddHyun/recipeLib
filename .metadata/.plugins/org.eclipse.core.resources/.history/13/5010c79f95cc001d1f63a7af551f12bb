@@ -1,0 +1,5 @@
+package com.dd.recipeLib.controller.join;
+
+public class JoinController {
+
+}

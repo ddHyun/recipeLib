@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/main}">
+	
+	<main layout:fragment="content">
+		<div style="margin:auto; text-align:center;">
+			<form style="display:inline-block;">
+				<div>
+				<label for="id" th:text="#{id}"></label>
+				<input type="text" id="id">
+				</div>
+				<div>
+				<label for="pwd" th:text="#{pwd}"></label>
+				<input type="text" id="pwd">
+				</div>
+			</form>
+		</div>
+	</main>
+
+</html>

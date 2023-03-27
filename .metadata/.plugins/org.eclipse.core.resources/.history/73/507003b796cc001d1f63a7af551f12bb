@@ -1,0 +1,13 @@
+package com.dd.recipeLib.controller.join;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/join")
+public class JoinController {
+
+	public String form() {
+		
+	}
+}
