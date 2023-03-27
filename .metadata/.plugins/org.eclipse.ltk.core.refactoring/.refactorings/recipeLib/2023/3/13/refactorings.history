@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;recipeLib/src/main/resources/templates/common/script.html&apos; to &apos;scripts.html&apos;" description="Rename resource &apos;script.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/common/script.html" name="scripts.html" stamp="1679898443823" updateReferences="true"/>
+</session>

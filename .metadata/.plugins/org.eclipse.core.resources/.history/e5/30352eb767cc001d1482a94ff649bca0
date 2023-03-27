@@ -1,0 +1,16 @@
+package com.dd.recipeLib.controller;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.dd.recipeLib.common.AlertException;
+
+@ControllerAdvice("controller")
+public class ExceptionController {
+
+	//오류메시지를 alert창에 띄우는 예외
+	@ExceptionHandler(AlertException.class)
+	public String handleAlertException(AlertException e) {
+		
+	}
+}

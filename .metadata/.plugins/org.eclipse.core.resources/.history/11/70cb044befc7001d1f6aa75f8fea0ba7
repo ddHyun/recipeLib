@@ -1,0 +1,5 @@
+package com.dd.recipeLib.config;
+
+public class MvcConfig {
+
+}

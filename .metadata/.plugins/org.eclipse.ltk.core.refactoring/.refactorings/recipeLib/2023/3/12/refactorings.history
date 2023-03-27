@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;recipeLib/src/main/resources/templates/login.html&apos; to &apos;login&apos;" description="Rename resource &apos;login.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/login.html" name="login" stamp="1679463939892" updateReferences="true"/>
+</session>
