@@ -10,6 +10,25 @@ html{
 label{
 	display: inline-block;
 	text-align: center;
-	width: 80px;
+	width: 130px;
 	font-weight: bold;
+}
+
+.btn{
+	color: #000;
+	background-color: #ddd;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.errMsg{
+	font-size: 0.8rem;
+	margin-left: 140px;
+	color: red;
+}
+
+.agree{
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
 }

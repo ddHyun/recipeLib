@@ -4,14 +4,45 @@
 	layout:decorate="~{layouts/main}">
 	
 	<main layout:fragment="content">
-		<form>
+		<form th:action="@{/recipeLib/join}" method="post" th:object="${joinRequest}" 
+					id="joinFrm" autocomplete="off">
 			<div>
-				<label for="id" th:text="#{id}"></label>
-				<input type="text" id="id">
+				<label for="id" th:text="#{user.id}">아이디</label>
+				<input type="text" id="id" name="id" th:field="*{id}">
+				<!-- <a class="btn" th:text="#{join.idCheck}">중복확인</a> -->
+ 				<div class="errMsg" th:each="err : ${#fields.errors('id')}" th:text="${err}"></div>
 			</div>
 			<div>
-				<label for="pwd" th:text="#{pwd}"></label>
-				<input type="text" id="pwd">
+				<label for="pwd" th:text="#{user.pwd}">비밀번호</label>
+				<input type="password" id="pwd" name="pwd" th:field="*{pwd}">
+ 				<div class="errMsg" th:each="err : ${#fields.errors('pwd')}" th:text="${err}"></div>
+			</div>
+			<div>
+				<label for="pwdCheck" th:text="#{join.pwdCheck}">비밀번호 확인</label>
+				<input type="password" id="pwdCheck" name="pwdCheck" th:field="*{pwdCheck}">
+ 				<div class="errMsg" th:each="err : ${#fields.errors('pwdCheck')}" th:text="${err}"></div>
+			</div>
+			<div>
+				<label for="name" th:text="#{user.name}">이름</label>
+				<input type="text" id="name" name="name" th:field="*{name}">
+ 				<div class="errMsg" th:each="err : ${#fields.errors('name')}" th:text="${err}"></div> 
+			</div>
+			<div>
+				<label for="email" th:text="#{user.email}">이메일</label>
+				<input type="text" id="email" name="email" th:field="*{email}">
+				<a class="btn" th:text="#{join.emailCheck}"></a>
+ 				<div class="errMsg" th:each="err : ${#fields.errors('email')}" th:text="${err}"></div> 
+			</div>
+			<hr>
+			<div>
+				<label class="agree">
+				<input type="checkbox" th:text="#{join.agree}" th:field="*{agree}" name="agree"></label>
+				<div class="errMsg" th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
+			</div>
+			<div>
+				<a class="btn" th:href="@{/recipeLib/login/form}" th:text="#{common.cancel}">취소</a>
+				<a class="btn" type="submit" onclick="document.getElementById('joinFrm').submit();" 
+					th:text="#{join.join}"></a>
 			</div>
 		</form>
 	</main>

@@ -1,5 +1,0 @@
-package com.dd.recipeLib.common;
-
-public class AlertException {
-
-}
