@@ -23,14 +23,12 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     public final StringPath email = createString("email");
 
-    public final StringPath id = createString("id");
-
     public final NumberPath<Long> idx = createNumber("idx", Long.class);
+
+    public final BooleanPath isDeleted = createBoolean("isDeleted");
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> modDt = _super.modDt;
-
-    public final StringPath name = createString("name");
 
     public final StringPath pwd = createString("pwd");
 
@@ -38,6 +36,10 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
     public final DateTimePath<java.time.LocalDateTime> regDt = _super.regDt;
 
     public final EnumPath<UserType> type = createEnum("type", UserType.class);
+
+    public final StringPath userId = createString("userId");
+
+    public final StringPath userNm = createString("userNm");
 
     public QUserEntity(String variable) {
         super(UserEntity.class, forVariable(variable));

@@ -14,13 +14,13 @@ public class JoinRequest {
 
 	private Long idx;
 	@NotBlank @Size(min=6)
-	private String id;
+	private String userId;
 	@NotBlank @Size(min=8, max=15)
 	@Pattern(regexp = "^([a-zA-Z].+)(\\w{7,14})")
 	private String pwd;
 	private String pwdCheck;
 	@NotBlank
-	private String name;
+	private String userNm;
 	@NotBlank @Email
 	private String email;
 	@AssertTrue

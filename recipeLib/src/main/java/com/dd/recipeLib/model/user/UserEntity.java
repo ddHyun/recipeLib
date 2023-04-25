@@ -16,13 +16,13 @@ public class UserEntity extends BaseEntity{
 	private Long idx;
 	
 	@Column(nullable = false, length=20)
-	private String id;
+	private String userId;
 	
 	@Column(nullable=false)
 	private String pwd;
 	
 	@Column(nullable=false, length=20)
-	private String name;
+	private String userNm;
 	
 	@Column(nullable=false, length=50)
 	private String email;
@@ -31,12 +31,15 @@ public class UserEntity extends BaseEntity{
 	@Column(nullable=false)
 	private UserType type = UserType.USER;
 	
+	@Column(nullable=false)
+	private  boolean isDeleted = false;
+	
 	@Builder
-	public UserEntity(Long idx, String id, String pwd, String name, String email) {
+	public UserEntity(Long idx, String userId, String pwd, String userNm, String email) {
 		this.idx = idx;
-		this.id = id;
+		this.userId = userId;
 		this.pwd = pwd;
-		this.name = name;
+		this.userNm = userNm;
 		this.email = email;
 	}	
 }

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layouts/main}"
+		xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+		
+		<main layout:fragment="content">
+			<th:block sec:authorize="isAuthenticated()">
+				<h3 th:text="${userId+'님 환영합니다'}"></h3>
+			</th:block>
+			<th:block sec:authorize="isAnonymous()">
+				<h3 th:text="#{welcome}">welcome</h3>
+			</th:block>
+			
+		</main>
+</html>

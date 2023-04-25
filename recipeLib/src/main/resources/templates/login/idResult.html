@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<th:block th:if="${result != 'noResult'}">
+			<h3 th:text="'아이디는 '+ ${@stringLib.masking(result, 3, '*')} + '입니다'"></h3>
+		<a th:href="@{/recipeLib/login}" th:text="#{login.login}">로그인</a>
+		<a th:href="@{/recipeLib/login/searchInfo/pwdSearch}" th:text="#{login.pwd}">비번찾기</a>
+	</th:block>
+	<th:block th:unless="${result != 'noResult'}">
+		<h3 th:text="#{error.noResult}"></h3>
+		<a th:href="@{/recipeLib/login/searchInfo/idSearch}" th:text="#{login.retry}">다시시도</a>
+		<a th:href="@{/recipeLib/login}" th:text="#{common.cancel}">취소</a>
+	</th:block>
+</html>

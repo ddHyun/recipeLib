@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyemelaf.org">
+
+	<th:block th:if="${result != 'noResult'}">
+		<form method="post" id="pwdChangeFrm" th:action="@{/recipeLib/login/changePwd}" 
+					th:object="${searchInfoRequest}" autocomplete="off">
+			<div>
+				<label for="pwdRe" th:text="#{login.pwdRe}">변경할 비번</label>
+				<input type="password" id="pwdRe" name="pwdRe" th:field="*{pwdRe}">
+				<div th:each="err : ${#fields.errors('pwdRe')}" th:text="${err}"></div>
+			</div>
+			<div>
+				<label for="pwdReCheck" th:text="#{login.pwdReCheck}">비번확인</label>
+				<input type="password" id="pwdReCheck" name="pwdReCheck" th:field="*{pwdReCheck}">
+				<div th:each="err : ${#fields.errors('pwdReCheck')}" th:text="${err}"></div>
+			</div>
+			<div>
+				<!-- <a type="submit" th:text="#{login.pwdChange}"
+					th:onclick="document.getElementById('pwdChangeFrm').submit();"></a> -->
+				<button type="submit" th:text="#{login.pwdChange}">비밀번호 변경</button>
+			</div>
+		</form>
+	</th:block>
+	<th:block th:unless="${result != 'noResult'}">
+		<h3 th:text="#{error.noResult}">조회결과 없음</h3>
+		<a th:href="@{/recipeLib/login/searchInfo/pwdSearch}" th:text="#{login.retry}">다시시도</a>
+		<a th:href="@{/recipeLib/login}" th:text="#{common.cancel}">취소</a>
+	</th:block>
+</html>

@@ -28,12 +28,11 @@ public class JoinValidator implements Validator{
 
 		//오류문구는 messages에서 관리
 		//아이디 중복 여부
-		String id = joinRequest.getId().trim();
-		if(id != null && !id.isBlank()) {			
-			UserEntity userEntity = userRepository.findByUserid(id).orElse(null);
-			System.out.println("id : "+ id +" / 검색결과 : "+userEntity);
-			if(userEntity != null && id.equals(userEntity.getId())) {
-				errors.rejectValue("id", "Duplicated.id");
+		String userId = joinRequest.getUserId().trim();
+		if(userId != null && !userId.isBlank()) {			
+			UserEntity userEntity = userRepository.findByUserId(userId).orElse(null);
+			if(userEntity != null && userId.equals(userEntity.getUserId())) {
+				errors.rejectValue("userId", "Duplicated.userId");
 			}
 		}
 		
