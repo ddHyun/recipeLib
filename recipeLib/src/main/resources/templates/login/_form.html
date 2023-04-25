@@ -1,0 +1,24 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+		<th:block th:fragment="searchInfoFrm">			
+			<div>
+				<th:block th:if="${idSearch}">
+					<label for="userNm"  th:text="#{user.userNm}">이름</label>
+					<input type="text" id="userNm" name="userNm" th:field="*{userNm}">
+					<div class="errMsg" th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
+				</th:block>
+				<th:block th:if="${pwdSearch}">
+					<label for="userId"  th:text="#{user.userId}">아이디</label>
+					<input type="text" id="userId" name="userId" th:field="*{userId}">
+					<div class="errMsg" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+				</th:block>
+			</div>
+			<div>
+				<label for="email"  th:text="#{user.email}">이메일</label>
+				<input type="text" id="email" name="email" th:field="*{email}">
+				<div class="errMsg" th:each="err : ${#fields.errors('email')}" th:text="${err}"></div>
+			</div>							
+		</th:block>
+		
+</html> -->
